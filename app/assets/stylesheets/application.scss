@@ -1,8 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import 'normalize';
-@import 'navigation';
-
 
 /* Sticky footer styles
 -------------------------------------------------- */
@@ -149,4 +147,8 @@ ul {
   li {
     margin-bottom: 2px;
   }
+
+
+@import 'navigation';
+@import 'mediaqueries';
 
