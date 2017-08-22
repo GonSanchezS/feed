@@ -8,10 +8,24 @@
 
 .main--title {
   margin: 40px 0 10px 0;
-  font-size: 30px;
+  font-size: 36px;
   color: white;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 700;
+}
+
+.main--title a {
+  color: white;
+}
+
+.main--title a:hover {
+  text-decoration: none;
+}
+
+.clearfix {
+  content: " ";
+  display: table;
+  clear: both;
 }
 
 .main--description {
