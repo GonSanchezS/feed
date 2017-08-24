@@ -56,8 +56,8 @@ p {
 }
 
 .email--box {
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 30px;
+  margin-bottom: 40px;
   background: #f9f9f9;
   padding: 25px;
   border-radius: 2px;
@@ -74,20 +74,20 @@ p {
 .main--title--email {
   font-size: 12px;
   margin-top: -2px;
-  color: #d9d9d9;
+  color: #8a8a8a;
   font-family: 'Fira Sans', sans-serif;
   line-height: 12px;
 }
 
 .main--link {
-  font-size: 15px;
+  font-size: 16px;
   font-family: 'Fira Sans', sans-serif;
   color: #4facfe;
 
 }
 
 .main--link:hover {
-    color: #00f2fe;
+    color: #676767;
     text-decoration: none;
 
 }
@@ -128,6 +128,14 @@ p {
   margin-bottom: 20px;
 }
 
+.email--cta {
+  font-size: 15px;
+  font-weight: 600;
+  color: #676767;
+  margin-bottom: 10px;
+  margin-top: 7px;
+}
+
 .clear {
   clear: both;
 }
@@ -138,6 +146,9 @@ h3 {
   text-transform: uppercase;
 }
 
+.twitter--box {
+  width: 100%
+}
 
 ul {
   list-style: none;
@@ -147,6 +158,27 @@ ul {
   li {
     margin-bottom: 2px;
   }
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-size: 13px;
+  font-family: 'Fira Sans', sans-serif;
+  color: #d9d9d9;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-size: 13px;
+  font-family: 'Fira Sans', sans-serif;
+  color: #d9d9d9;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-size: 13px;
+  font-family: 'Fira Sans', sans-serif;
+  color: #d9d9d9;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-size: 13px;
+  font-family: 'Fira Sans', sans-serif;
+  color: #d9d9d9;
+}
 
 
 @import 'navigation';
