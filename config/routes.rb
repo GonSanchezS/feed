@@ -1,8 +1,12 @@
+
 Rails.application.routes.draw do
   root 'static_pages#index'
   get 'all', to:'static_pages#all'
   get 'submit', to:'static_pages#submit'
   get 'almost', to:'static_pages#almost'
+  get 'sources', to: 'static_pages#sources'
+  get 'archive', to: 'static_pages#archive'
+  get 'making', to: 'static_pages#making'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

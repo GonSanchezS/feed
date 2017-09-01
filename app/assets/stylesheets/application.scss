@@ -128,6 +128,11 @@ p {
   margin-bottom: 20px;
 }
 
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
+
 .email--cta {
   font-size: 15px;
   font-weight: 600;
@@ -183,5 +188,7 @@ ul {
 
 
 @import 'navigation';
+@import 'sources';
+@import 'archive';
 @import 'mediaqueries';
 
