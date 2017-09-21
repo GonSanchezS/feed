@@ -1,38 +1,110 @@
 <div class="container right-column">
 
-  <p class="date--title" id="mobile-invisible">Latest</p>
+  <p class="date--title">TODAY</p>
 
   <ul>
-    <li>
+    <li class="daily--link">
       <a href="https://conversio.com/deep-dive/increase-customer-lifetime-value/" class="main--link">How Ecommerce Brands can Increase Customer Lifetime Value 📌 </a>
         <br />
       <span class="source">Conversio • Must read</span>
-        <hr class="ruler"/>
     </li>
 
     <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="4" sheetsu-sheet="Sorted">
-      <li>
+      <li class="daily--link">
         <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
           <br />
         <span class="source">{{source}} • {{date}}</span>
-          <hr class="ruler"/>
-      </li>
-    </div>
-  </ul>
-
-  <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="5" sheetsu-offset="4" sheetsu-sheet="Sorted">
-      <li>
-        <a href="{{url}}" class="main--link">{{title}} {{category}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-          <hr class="ruler"/>
       </li>
     </div>
   </ul>
 
   <br />
-  <div class="text-center"><%= link_to "View older links", all_path, :class => "older--link" %> 📋</div>
+
+  <p class="date--title"><%= (Date.today - 1.days).strftime('%B %d') %></p>
+
+    <ul>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="6" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+          <br />
+        <span class="source">{{source}} • {{date}}</span>
+      </li>
+    </div>
+  </ul>
+
+  <br />
+
+  <p class="date--title"><%= (Date.today - 2.days).strftime('%B %d') %></p>
+
+    <ul>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="6" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+          <br />
+        <span class="source">{{source}} • {{date}}</span>
+      </li>
+    </div>
+  </ul>
+
+  <br />
+
+  <p class="date--title"><%= (Date.today - 3.days).strftime('%B %d') %></p>
+
+    <ul>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="6" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+          <br />
+        <span class="source">{{source}} • {{date}}</span>
+      </li>
+    </div>
+  </ul>
+
+  <br />
+
+  <p class="date--title"><%= (Date.today - 4.days).strftime('%B %d') %></p>
+
+    <ul>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="6" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+          <br />
+        <span class="source">{{source}} • {{date}}</span>
+      </li>
+    </div>
+  </ul>
+
+  <br />
+
+  <p class="date--title"><%= (Date.today - 5.days).strftime('%B %d') %></p>
+
+    <ul>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="6" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+          <br />
+        <span class="source">{{source}} • {{date}}</span>
+      </li>
+    </div>
+  </ul>
+
+  <br />
+
+  <p class="date--title"><%= (Date.today - 6.days).strftime('%B %d') %></p>
+
+    <ul>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-limit="6" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+          <br />
+        <span class="source">{{source}} • {{date}}</span>
+      </li>
+    </div>
+  </ul>
+
+  <br />
+
+  <div><%= link_to "View older links", all_path, :class => "older--link" %> 📋</div>
 
 
 
