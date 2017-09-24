@@ -21,10 +21,13 @@
 
  <!-- Yesterday -->   
 
-  <% if (Date.today - 1.days).saturday? || (Date.today - 1.days).sunday? %>
-  <% else %>
+  <% if (Date.today - 1.days).saturday? %> 
+  <!-- Nothing -->
+  <% elsif (Date.today - 1.days).sunday? %>
+      <p class="date--title"><%= (date = Date.today - 1.days).strftime('%B %d') %></p>
+      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+  <% else %>   
     <p class="date--title"><%= (date = Date.today - 1.days).strftime('%B %d') %></p>
-
     <ul>
       <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 1.days).strftime('%B %d') %>"}'>
         <li class="daily--link">
@@ -42,10 +45,13 @@
 
 <!-- 2 Days Ago -->   
 
-  <% if (Date.today - 2.days).saturday? || (Date.today - 2.days).sunday? %>
-  <% else %>
+  <% if (Date.today - 2.days).saturday? %> 
+  <!-- Nothing -->
+  <% elsif (Date.today - 2.days).sunday? %>
+      <p class="date--title"><%= (date = Date.today - 2.days).strftime('%B %d') %></p>
+      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+  <% else %>   
     <p class="date--title"><%= (date = Date.today - 2.days).strftime('%B %d') %></p>
-
     <ul>
       <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 2.days).strftime('%B %d') %>"}'>
         <li class="daily--link">
@@ -63,10 +69,13 @@
 
 <!-- 3 Days Ago -->   
 
-  <% if (Date.today - 3.days).saturday? || (Date.today - 3.days).sunday? %>
-  <% else %>
+  <% if (Date.today - 3.days).saturday? %> 
+  <!-- Nothing -->
+  <% elsif (Date.today - 3.days).sunday? %>
+      <p class="date--title"><%= (date = Date.today - 3.days).strftime('%B %d') %></p>
+      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+  <% else %>   
     <p class="date--title"><%= (date = Date.today - 3.days).strftime('%B %d') %></p>
-
     <ul>
       <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 3.days).strftime('%B %d') %>"}'>
         <li class="daily--link">
@@ -81,8 +90,12 @@
 
   <!-- 4 Days Ago -->   
 
-  <% if (Date.today - 4.days).saturday? || (Date.today - 4.days).sunday? %>
-  <% else %>
+  <% if (Date.today - 4.days).saturday? %> 
+  <!-- Nothing -->
+  <% elsif (Date.today - 4.days).sunday? %>
+      <p class="date--title"><%= (date = Date.today - 4.days).strftime('%B %d') %></p>
+      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+  <% else %>   
     <p class="date--title"><%= (date = Date.today - 4.days).strftime('%B %d') %></p>
 
     <ul>
@@ -101,8 +114,12 @@
 
   <!-- 5 Days Ago -->   
 
-  <% if (Date.today - 5.days).saturday? || (Date.today - 5.days).sunday? %>
-  <% else %>
+  <% if (Date.today - 5.days).saturday? %> 
+  <!-- Nothing -->
+  <% elsif (Date.today - 5.days).sunday? %>
+      <p class="date--title"><%= (date = Date.today - 5.days).strftime('%B %d') %></p>
+      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+  <% else %>   
     <p class="date--title"><%= (date = Date.today - 5.days).strftime('%B %d') %></p>
 
     <ul>
@@ -121,8 +138,12 @@
 
   <!-- 6 Days Ago -->   
 
-  <% if (Date.today - 6.days).saturday? || (Date.today - 6.days).sunday? %>
-  <% else %>
+  <% if (Date.today - 6.days).saturday? %> 
+  <!-- Nothing -->
+  <% elsif (Date.today - 6.days).sunday? %>
+      <p class="date--title"><%= (date = Date.today - 6.days).strftime('%B %d') %></p>
+      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+  <% else %>   
     <p class="date--title"><%= (date = Date.today - 6.days).strftime('%B %d') %></p>
 
     <ul>
@@ -138,32 +159,5 @@
     </ul>
     <br />
   <% end %>
-
-  <!-- 7 Days Ago -->   
-
-  <% if (Date.today - 7.days).saturday? || (Date.today - 7.days).sunday? %>
-  <% else %>
-    <p class="date--title"><%= (date = Date.today - 7.days).strftime('%B %d') %></p>
-
-    <ul>
-      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 7.days).strftime('%B %d') %>"}'>
-        <li class="daily--link">
-          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-            <br />
-          <span class="source">{{source}} • <a class="twitter-share-button" rel="me"
-  href="https://twitter.com/intent/tweet?text={{title}}%20{{url}}%20via%20@ecommercedailyy">
-<i class="fa fa-twitter" aria-hidden="true"></i></a></span>
-        </li>
-      </div>
-    </ul>
-    <br />
-  <% end %>
-
-
-
-  <div><%= link_to "View older links", all_path, :class => "older--link" %> 📋</div>
-
-
-
 
 </div>
