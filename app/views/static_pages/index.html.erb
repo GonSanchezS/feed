@@ -2,114 +2,158 @@
 
   <p class="date--title">TODAY</p>
 
-  <ul>
-    <li class="daily--link">
-      <a href="https://conversio.com/deep-dive/increase-customer-lifetime-value/" class="main--link">How Ecommerce Brands can Increase Customer Lifetime Value 📌 </a>
-        <br />
-      <span class="source">Conversio • Must read</span>
-    </li>
+  <% if (Date.today).saturday? || (Date.today).sunday? %>
+    <p>The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either. Go enjoy the ☀️</p>
+  <% else %>
+    <ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-sheet="Sorted"  sheetsu-search='{"date": "<%= (Date.today).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • Tweet this link</span>
+            <hr class="ruler"/>
+        </li>
+      </div>
+    </ul>
+  <% end %>
 
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-sheet="Sorted"  sheetsu-search='{"date": "<%= (Date.today).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
+    <br />
 
-  <br />
+ <!-- Yesterday -->   
 
-  <p class="date--title"><%= (Date.today - 1.days).strftime('%B %d') %></p>
+  <% if (Date.today - 1.days).saturday? || (Date.today - 1.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 1.days).strftime('%B %d') %></p>
 
     <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 1.days).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 1.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • Tweet this link</span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
 
-  <br />
 
-  <p class="date--title"><%= (Date.today - 2.days).strftime('%B %d') %></p>
+<!-- 2 Days Ago -->   
 
-    <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 2.days).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
-
-  <br />
-
-  <p class="date--title"><%= (Date.today - 3.days).strftime('%B %d') %></p>
+  <% if (Date.today - 2.days).saturday? || (Date.today - 2.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 2.days).strftime('%B %d') %></p>
 
     <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 3.days).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 2.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • <a class="twitter-share-button" rel="me"
+  href="https://twitter.com/intent/tweet?text={{title}}%20{{url}}%20via%20@ecommercedailyy">
+<i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
 
-  <br />
 
-  <p class="date--title"><%= (Date.today - 4.days).strftime('%B %d') %></p>
+<!-- 3 Days Ago -->   
 
-    <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b"  sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 4.days).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
-
-  <br />
-
-  <p class="date--title"><%= (Date.today - 5.days).strftime('%B %d') %></p>
+  <% if (Date.today - 3.days).saturday? || (Date.today - 3.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 3.days).strftime('%B %d') %></p>
 
     <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b"  sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 5.days).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 3.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • <i class="fa fa-twitter" aria-hidden="true"></i></span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
 
-  <br />
+  <!-- 4 Days Ago -->   
 
-  <p class="date--title"><%= (Date.today - 6.days).strftime('%B %d') %></p>
+  <% if (Date.today - 4.days).saturday? || (Date.today - 4.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 4.days).strftime('%B %d') %></p>
 
     <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b"  sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 6.days).strftime('%B %d') %>"}'>
-      <li class="daily--link">
-        <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-      </li>
-    </div>
-  </ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 4.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • <i class="fa fa-twitter" aria-hidden="true"></i></span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
 
-  <br />
+  <!-- 5 Days Ago -->   
+
+  <% if (Date.today - 5.days).saturday? || (Date.today - 5.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 5.days).strftime('%B %d') %></p>
+
+    <ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 5.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • <i class="fa fa-twitter" aria-hidden="true"></i></span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
+
+  <!-- 6 Days Ago -->   
+
+  <% if (Date.today - 6.days).saturday? || (Date.today - 6.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 6.days).strftime('%B %d') %></p>
+
+    <ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 6.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • <i class="fa fa-twitter" aria-hidden="true"></i></span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
+
+  <!-- 7 Days Ago -->   
+
+  <% if (Date.today - 7.days).saturday? || (Date.today - 7.days).sunday? %>
+  <% else %>
+    <p class="date--title"><%= (date = Date.today - 7.days).strftime('%B %d') %></p>
+
+    <ul>
+      <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-search='{"date": "<%= (Date.today - 7.days).strftime('%B %d') %>"}'>
+        <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
+            <br />
+          <span class="source">{{source}} • <i class="fa fa-twitter" aria-hidden="true"></i></span>
+        </li>
+      </div>
+    </ul>
+    <br />
+  <% end %>
+
+
 
   <div><%= link_to "View older links", all_path, :class => "older--link" %> 📋</div>
 
 
 
-  <hr style="border: 0;"/>
-
-  <br class="clear" />
 
 </div>

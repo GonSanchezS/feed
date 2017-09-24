@@ -132,16 +132,23 @@ p {
   margin-top: 10px;
 }
 
+.fa-twitter {
+  color: #d5d5d5;
+
+  &:hover {
+    color: #00aced;
+  }
+}
+
 .older--link {
-  font-size: 15px;
+  font-size: 12px;
   font-family: 'Fira Sans', sans-serif;
   color: #7c8ca4;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .older--link:hover {
   text-decoration: none;
-  border-bottom: 2px solid #d5d5d5;
   color: #d5d5d5;
 }
 
