@@ -3,7 +3,7 @@
   <p class="date--title">TODAY</p>
 
   <% if (Date.today).saturday? || (Date.today).sunday? %>
-    <p>The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either. Go enjoy the ☀️</p>
+    <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>
   <% else %>
     <ul>
       <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-sheet="Sorted"  sheetsu-search='{"date": "<%= (Date.today).strftime('%B %d') %>"}'>
