@@ -5,13 +5,23 @@
   <% if (Date.today).saturday? || (Date.today).sunday? %>
     <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>
   <% else %>
+    
     <ul>
+
+        <li class="daily--link">
+          <a href="https://www.nerdmarketing.com/roas-romi/" class="main--link">ROAS vs. ROMI: This is how you should measure your marketing</a> 📌
+            <br />
+          <span class="source">Nerd Marketing • Featured</span>
+        </li>
+
       <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted" sheetsu-sheet="Sorted"  sheetsu-search='{"date": "<%= (Date.today).strftime('%B %d') %>"}'>
+
         <li class="daily--link">
           <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
             <br />
-          <span class="source">{{source}} • Tweet this link</span>
-            <hr class="ruler"/>
+          <span class="source">{{source}} • <a class="twitter-share-button" rel="me"
+  href="https://twitter.com/intent/tweet?text={{title}}%20{{url}}%20via%20@ecommercedailyy">
+<i class="fa fa-twitter" aria-hidden="true"></i></a></span>
         </li>
       </div>
     </ul>
@@ -81,7 +91,9 @@
         <li class="daily--link">
           <a href="{{url}}" class="main--link">{{category}} {{title}}</a>
             <br />
-          <span class="source">{{source}} • <i class="fa fa-twitter" aria-hidden="true"></i></span>
+          <span class="source">{{source}} • <a class="twitter-share-button" rel="me"
+  href="https://twitter.com/intent/tweet?text={{title}}%20{{url}}%20via%20@ecommercedailyy">
+<i class="fa fa-twitter" aria-hidden="true"></i></a></span>
         </li>
       </div>
     </ul>
