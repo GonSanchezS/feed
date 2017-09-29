@@ -1,13 +1,14 @@
 <div class="container col-md-6 col-md-offset-3">
   <p class="date--title">All posts</p>  
   <ul>
-    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-offset="10" sheetsu-sheet="Sorted">
-      <li>
-        <a href="{{url}}" class="main--link">{{title}} {{category}}</a>
-          <br />
-        <span class="source">{{source}} • {{date}}</span>
-          <hr class="ruler"/>
-      </li>
+    <div sheetsu="https://sheetsu.com/apis/v1.0/a2533b00323b" sheetsu-sheet="Sorted">
+      <li class="daily--link">
+          <a href="{{url}}" class="main--link">{{title}} {{category}}</a>
+            <br />
+          <span class="source">{{source}} • {{date}} • <a class="twitter-share-button" rel="me"
+  href="https://twitter.com/intent/tweet?text={{title}}%20{{url}}%20via%20@ecommercedailyy">
+<i class="fa fa-twitter" aria-hidden="true"></i></a></span>
+        </li>
     </div>
   </ul>
 </div>

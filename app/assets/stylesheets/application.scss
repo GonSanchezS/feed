@@ -118,11 +118,13 @@ p {
 .weekend--note {
   padding: 12px;
   background-color: #ededed;
-  display: inline-block;
+  width: 83%;
   margin-bottom: 40px;
   font-size: 14px;
   font-family: 'Fira Sans', sans-serif;
   color: #a8a8a8;
+  clear: left;
+
 }
 
 .email--note {
@@ -130,7 +132,7 @@ p {
 }
 
 .source {
-  color: #d5d5d5;
+  color: #afafaf;
   font-size: 12px;
 }
 
@@ -144,10 +146,10 @@ p {
 }
 
 .fa-twitter {
-  color: #d5d5d5;
+  color: #00aced;
 
   &:hover {
-    color: #00aced;
+    color: #afafaf;
   }
 }
 
@@ -165,11 +167,17 @@ p {
 
 .date--title {
   text-transform: uppercase;
-  color: #7c8ca4;
-  font-weight: 700;
+  color: white;
+  font-size: 11px;
+  font-weight: 500;
   letter-spacing: 1.1px;
   font-family: 'Fira Sans', sans-serif;
   margin-bottom: 10px;
+  background-color: #ea5848;
+  display: inline-block;
+  padding: 3px; 
+  padding-bottom: 2px;
+  border-radius: 2px;
 }
 
 .col-centered {

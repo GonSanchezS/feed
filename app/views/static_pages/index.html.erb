@@ -153,8 +153,8 @@
   <% if (Date.today - 6.days).saturday? %> 
   <!-- Nothing -->
   <% elsif (Date.today - 6.days).sunday? %>
-      <p class="date--title"><%= (date = Date.today - 6.days).strftime('%B %d') %></p>
-      <p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
+      <p class="date--title"><%= (date = Date.today - 6.days).strftime('%B %d') %></p><br class="clearfix"/>
+      <br /><p class="weekend--note">The eCommerce robot 🤖 doesn't work on weekends. You shouldn't either 🏄</p>  
   <% else %>   
     <p class="date--title"><%= (date = Date.today - 6.days).strftime('%B %d') %></p>
 
